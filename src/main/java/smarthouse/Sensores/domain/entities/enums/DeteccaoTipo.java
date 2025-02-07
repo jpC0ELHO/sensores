@@ -25,7 +25,7 @@ public enum DeteccaoTipo {
             if (tipo.getDescricao().equalsIgnoreCase(descricao)) {
                 return tipo;
             }
-        }
+            }
         throw new IllegalArgumentException("Tipo de deteccão inválido: " + descricao);
     }
 }
