@@ -6,7 +6,9 @@ import lombok.Getter;
 @Getter
 public enum SensorTipo {
 
-    INCENDIO("INCENDIO"),
+    CO2("CO2"),
+    FUMACA("FUMACA"),
+    CHAMAS("CHAMAS"),
     GAS("GAS"),
     LIQUIDO("LIQUIDO"),
     CALOR("CALOR"),
