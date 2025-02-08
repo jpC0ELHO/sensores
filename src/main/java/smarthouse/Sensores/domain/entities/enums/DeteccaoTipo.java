@@ -4,6 +4,7 @@ import lombok.Getter;
 
 @Getter
 public enum DeteccaoTipo {
+
     OBJETO("Objeto"),
     OBJETO_MOVIMENTO("Objeto em Movimento"),
     ANIMAL("Animal"),

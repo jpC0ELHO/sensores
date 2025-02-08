@@ -23,6 +23,7 @@ import java.time.LocalDateTime;
 @EntityListeners(AuditingEntityListener.class)
 @JsonNaming(PropertyNamingStrategies.SnakeCaseStrategy.class)
 public class Leitura extends Entidade{
+
     @Column(nullable = false, name = "deteccao_sim_nao")
     private Boolean  deteccao_sim_nao;
     @Enumerated(EnumType.STRING)
