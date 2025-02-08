@@ -1,5 +1,5 @@
 # Projeto criado para SmartHouse
-- Sensores são baseados em necessidades pessoas de cada cliente.
+- Sensores são baseados em necessidades pessoais de cada cliente.
 
 - Projeto criado apenas para registros e protocolos de comunicação wireless.
 
