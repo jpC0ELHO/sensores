@@ -3,7 +3,7 @@ package smarthouse.Sensores.domain.entities.enums;
 import lombok.Getter;
 
 @Getter
-public enum Localidade {
+public enum Regiao {
     SALA("SALA"),
     QUARTO1("QUARTO1J"),
     QUARTO2("QUARTO2F"),
@@ -15,7 +15,7 @@ public enum Localidade {
     CORREDOR_GARAGEM("CORREDOR GARAGEM");
     private final String descricao;
 
-    Localidade(String descricao){
+    Regiao(String descricao){
         this.descricao=descricao;
     }
 
@@ -23,8 +23,8 @@ public enum Localidade {
         return descricao;
     }
 
-    public static Localidade fromLocalidade(String descricao){
-        for (Localidade local:Localidade.values()){
+    public static Regiao fromLocalidade(String descricao){
+        for (Regiao local: Regiao.values()){
             if (local.getDescricao().equalsIgnoreCase(descricao)){
                 return local;
             }
