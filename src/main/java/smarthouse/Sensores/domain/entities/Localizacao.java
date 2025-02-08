@@ -25,7 +25,6 @@ public class Localizacao extends Entidade{
     private Double latitude;
     @Column(precision = 5,scale = 2,name = "Longitude",nullable = false)
     private Double longitude;
-
     @Enumerated(EnumType.STRING)
     private Regiao localidade;
 

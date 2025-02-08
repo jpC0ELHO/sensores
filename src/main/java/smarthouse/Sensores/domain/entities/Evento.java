@@ -28,7 +28,6 @@ public class Evento {
 
     @Column(nullable = false)
     private String tipoEvento;
-
     @Column(nullable = false)
     private String local;
     @Column(nullable = false)

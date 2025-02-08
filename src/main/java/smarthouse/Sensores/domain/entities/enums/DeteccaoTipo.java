@@ -19,7 +19,6 @@ public enum DeteccaoTipo {
     public String getDescricao() {
         return descricao;
     }
-
     public static DeteccaoTipo fromDescricao(String descricao) {
         for (DeteccaoTipo tipo : DeteccaoTipo.values()) {
             if (tipo.getDescricao().equalsIgnoreCase(descricao)) {
