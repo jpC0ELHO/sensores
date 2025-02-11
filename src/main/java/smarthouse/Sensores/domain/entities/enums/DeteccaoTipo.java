@@ -8,6 +8,9 @@ public enum DeteccaoTipo {
     OBJETO("Objeto"),
     OBJETO_MOVIMENTO("Objeto em Movimento"),
     ANIMAL("Animal"),
+    GAS("GAS"),
+    CO2("CO2"),
+    GLP("GLP"),
     ANIMAL_MOVIMENTO("Animal em Movimento"),
     CALOR_ALTO("Calor Alto"),
     HIPERCALOR("Hipercalor");
