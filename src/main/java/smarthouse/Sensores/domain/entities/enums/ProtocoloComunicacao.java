@@ -19,4 +19,17 @@ public enum ProtocoloComunicacao {
         ProtocoloComunicacao(String descicao){
             this.descicao=descicao;
         }
+
+        public String getProtocoloComunicacao(){
+            return descicao;
+        }
+
+        public static ProtocoloComunicacao fromDescricao(String descricao){
+            for(ProtocoloComunicacao comunicacao:ProtocoloComunicacao.values()){
+                if (comunicacao.getProtocoloComunicacao().equalsIgnoreCase(descricao)){
+                    return comunicacao;
+                }
+            }
+            throw new IllegalArgumentException("Tipo de comunicação invalido: "+descricao);
+        }
 }
