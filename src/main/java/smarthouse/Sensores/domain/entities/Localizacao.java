@@ -17,7 +17,6 @@ import smarthouse.Sensores.domain.entities.enums.Regiao;
 @EntityListeners(AuditingEntityListener.class)
 @JsonNaming(PropertyNamingStrategies.SnakeCaseStrategy.class)
 public class Localizacao extends Entidade{
-
     @ManyToOne
     @JoinColumn(name = "sensor_id", nullable = false)
     private Sensor sensor;
