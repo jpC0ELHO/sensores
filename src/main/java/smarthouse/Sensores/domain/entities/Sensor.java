@@ -29,6 +29,7 @@ import java.time.LocalDateTime;
 public class Sensor extends Entidade{
     @Column(nullable = false,name = "nome",length = 15)
     private String name;
+    @ManyToOne
     @Column(name = "localizacao_sensor")
     private Localizacao localizacao;
     @Column(name = "tipo_sensor")
