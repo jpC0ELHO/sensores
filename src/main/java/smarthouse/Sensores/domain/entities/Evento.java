@@ -24,8 +24,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @EntityListeners(AuditingEntityListener.class)
 @JsonNaming(PropertyNamingStrategies.SnakeCaseStrategy.class)
-public class Evento {
-
+public class Evento extends Entidade{
     @Column(nullable = false)
     private String tipoEvento;
     @Column(nullable = false)
