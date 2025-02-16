@@ -13,6 +13,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 import org.springframework.format.annotation.DateTimeFormat;
+import smarthouse.Sensores.domain.entities.enums.ProtocoloComunicacao;
 import smarthouse.Sensores.domain.entities.enums.SensorTipo;
 import smarthouse.Sensores.domain.entities.enums.UnidadeMemoria;
 
@@ -52,5 +53,7 @@ public class Sensor extends Entidade{
     private String dadosDescricao;
     @Enumerated(EnumType.STRING)
     private UnidadeMemoria unidadeMemoria;
+    @Enumerated(EnumType.STRING)
+    private ProtocoloComunicacao protocoloComunicacao;
 
 }
