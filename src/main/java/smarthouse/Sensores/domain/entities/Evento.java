@@ -11,6 +11,7 @@ import jakarta.persistence.*;
 import lombok.*;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 import org.springframework.format.annotation.DateTimeFormat;
+import smarthouse.Sensores.domain.entities.enums.EventoTipo;
 
 import java.time.LocalDateTime;
 
@@ -28,7 +29,7 @@ public class Evento extends Entidade{
     @Column(nullable = false)
     private String tipoEvento;
     @Column(nullable = false)
-    private String local;
+    private Localizacao local;
     @Column(nullable = false)
     private String descricao;
     @Column(name = "horario_evento",nullable = false)
@@ -37,6 +38,8 @@ public class Evento extends Entidade{
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @DateTimeFormat(pattern = "dd/MM/yyyy HH:mm:ss")
     private LocalDateTime horarioEvento;
+    @Enumerated
+    private EventoTipo eventoTipo;
     @ManyToOne
     @JoinColumn(name = "tb_sensores")
     private Sensor sensor;

@@ -3,7 +3,7 @@ package smarthouse.Sensores.domain.entities.enums;
 import lombok.Getter;
 
 @Getter
-public enum Eventos {
+public enum EventoTipo {
     //brevidades
     INCENDIO("INCENDIO"),
     COMBUSTAO("COMBUSTAO"),
@@ -20,7 +20,7 @@ public enum Eventos {
 
     private final String descricao;
 
-    Eventos(String descricao){
+    EventoTipo(String descricao){
         this.descricao=descricao;
     }
 }
