@@ -10,13 +10,16 @@ import smarthouse.Sensores.domain.entities.enums.UnidadeMemoria;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
-@JsonPropertyOrder({"name","localizacao","horarioAcionamento","memoriaUsada","memoriaDisponivel"
-        ,"valorDadosTransferencia","descricao","unidadeMemoria","protocoloComunicacao","createdBy","lastModifiedBy"
+@JsonPropertyOrder({"name","localizacao","sensorTipo","ativadoDesativado",
+        "horarioAcionamento","memoriaUsada","memoriaDisponivel"
+        ,"valorDadosTransferencia","descricao","unidadeMemoria",
+        "protocoloComunicacao","createdBy","lastModifiedBy"
 ,"createdAt","updateAt"})
 public record SensorResponse (
         String name,
         Localizacao localizacao,
         SensorTipo sensorTipo,
+        boolean ativadoDesativado,
         LocalDateTime horarioAcionamento,
         BigDecimal memoriaUsada,
         BigDecimal memoriaDisponivel,
@@ -37,6 +40,7 @@ public record SensorResponse (
                 sensor.getName(),
                 sensor.getLocalizacao(),
                 sensor.getSensorTipo(),
+                sensor.isAtivadoDesativado(),
                 sensor.getHorarioAcionamento(),
                 sensor.getMemoriaUsada(),
                 sensor.getMemoriaDisponivel(),
