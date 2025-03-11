@@ -7,6 +7,7 @@ import jakarta.validation.constraints.NotNull;
 import smarthouse.Sensores.domain.entities.Localizacao;
 import smarthouse.Sensores.domain.entities.Sensor;
 import smarthouse.Sensores.domain.entities.enums.ProtocoloComunicacao;
+import smarthouse.Sensores.domain.entities.enums.Regiao;
 import smarthouse.Sensores.domain.entities.enums.SensorTipo;
 import smarthouse.Sensores.domain.entities.enums.UnidadeMemoria;
 
@@ -24,6 +25,9 @@ public record SensorRequest(
         @NotNull
         @NotBlank
         SensorTipo sensorTipo,
+        @NotNull
+        @NotBlank
+        Regiao regiao,
         @NotNull
         @NotBlank
         boolean ativadoDesativado,
@@ -54,6 +58,7 @@ public record SensorRequest(
                 sensorRequest.name,
                 sensorRequest.localizacao,
                 sensorRequest.sensorTipo,
+                sensorRequest.regiao,
                 sensorRequest.ativadoDesativado,
                 sensorRequest.horarioAcionamento,
                 sensorRequest.memoriaUsada,
