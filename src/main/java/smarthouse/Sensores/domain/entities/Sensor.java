@@ -14,6 +14,7 @@ import lombok.NoArgsConstructor;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 import org.springframework.format.annotation.DateTimeFormat;
 import smarthouse.Sensores.domain.entities.enums.ProtocoloComunicacao;
+import smarthouse.Sensores.domain.entities.enums.Regiao;
 import smarthouse.Sensores.domain.entities.enums.SensorTipo;
 import smarthouse.Sensores.domain.entities.enums.UnidadeMemoria;
 
@@ -36,6 +37,8 @@ public class Sensor extends Entidade{
     @Column(name = "tipo_sensor")
     @Enumerated(EnumType.STRING)
     private SensorTipo sensorTipo;
+    @Enumerated(EnumType.STRING)
+    private Regiao regiao;
     @Column(name = "status")
     private boolean ativadoDesativado;
     @DateTimeFormat(pattern = "dd/MM/yyyy HH:mm:ss")
