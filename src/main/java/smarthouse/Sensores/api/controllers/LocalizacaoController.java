@@ -4,10 +4,8 @@ import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import smarthouse.Sensores.api.dtos.LocalizacaoRequest;
 import smarthouse.Sensores.api.dtos.LocalizacaoResponse;
 import smarthouse.Sensores.api.services.localizacaoService.LocalizacaoService;
 
@@ -29,5 +27,22 @@ public class LocalizacaoController {
      @GetMapping(value = "/{id}",consumes = MediaType.APPLICATION_JSON_VALUE,produces = MediaType.APPLICATION_JSON_VALUE)
      public ResponseEntity<Optional<LocalizacaoResponse>>findLocalizacaoId(@PathVariable UUID uuid){
         return ResponseEntity.status(HttpStatus.FOUND).body(localizacaoService.findById(uuid));
+     }
+
+     @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE,produces = MediaType.APPLICATION_JSON_VALUE)
+     @ResponseStatus(HttpStatus.CREATED)
+     public void createLocalizacao(@RequestBody LocalizacaoRequest localizacaoRequest){
+        localizacaoService.createLocalizacao(localizacaoRequest);
+     }
+
+     @PutMapping(value = "/{id}",consumes = MediaType.APPLICATION_JSON_VALUE,produces = MediaType.APPLICATION_JSON_VALUE)
+     @ResponseStatus(HttpStatus.OK)
+     public void updateLocalizacao(@PathVariable UUID uuid,@RequestBody LocalizacaoRequest localizacaoRequest){
+        localizacaoService.updateLocalizacao(uuid,localizacaoRequest);
+     }
+
+     @DeleteMapping(value = "/{id}",consumes = MediaType.APPLICATION_JSON_VALUE)
+     public void deleteLocalizacao(@PathVariable UUID uuid){
+        localizacaoService.deleteLocalizacao(uuid);
      }
 }
